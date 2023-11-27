@@ -1,0 +1,42 @@
+ 125  sudo yum remove docker docker-engine
+  126  sudo yum install -y yum-utils
+  127  sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+  128  sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  129  sudo systemctl start docker
+  130  sudo systemctl status docker
+  131  sudo docker run hello-world
+  132  ls Downloads
+  133  ls Madhan
+  134  sudo docker images
+  135  cat /etc/group |grep '^r'
+  136  cat /etc/group |head 3
+  137  cat /etc/group | head 3
+  138  cat /etc/group | head(2)
+  139  cat /etc/group | head -2
+  140  cat /etc/group |cut -d: -f1
+  141  cat /etc/group |grep 'd*'
+  142  cat /etc/group |grep 'docker'
+  143  cat /etc/group |grep 'docker'|cut -d: -f1
+  144  echo $USER
+  145  sudo usermod -aG docker $USER
+  146  echo $?
+  147  cd Madhan
+  148  mkdir docker_practice
+  149  cd d*
+  150  vi dock
+  151  git version
+  152  vi dock
+  153  sudo docker built -t mygit:1.0 
+  154  sudo docker built -t mygit:1.0 .
+  155  sudo docker build -t mygit:1.0 .
+  156  mv dock Dockerfile
+  157  ls
+  158  sudo docker build -t mygit:1.0 .
+  159  vi Docker
+  160  vi Dockerfile
+  161  sudo docker build -t mygit:1.0 .
+  162  sudo docker images
+  163  sudo docker build -t mylinuxmachine:1.0 .
+  164  ls
+  165  sudo docker ps -a
+
