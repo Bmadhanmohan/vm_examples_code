@@ -20,12 +20,13 @@ if __name__ == '__main__':
     #[07 / Mar / 2004:16:05:49 - 0800]  datepattern
     dt_ext=r'\[(\d{2}/\w{3}/\d{4}:\d{2}:\d{2}:\d{2} -\d{4})\]'
     url_date=r'"([^"]*)"'
-    bytes_col=r'(\d{5})$'
+    status_col=r'(\d{1,3}\d) \d{1,5}$'
+    bytes_col=r'(\d{1,5})$'
     res_df=even_data_log\
         .withColumn('ip_address',regexp_extract('EventLogs', ip_add,idx=0)) \
         .withColumn('ip_Date', regexp_extract('EventLogs', dt_ext, idx=1)) \
         .withColumn('url_address',regexp_extract('EventLogs',url_date , idx=1)) \
-        .withColumn('Status_code', substring('EventLogs',length(even_data_log["EventLog"]))-9,3)\
+        .withColumn('Status_code', substring(regexp_extract('EventLogs',status_col,1),1,3))\
         .withColumn('storage', regexp_extract('EventLogs',bytes_col , idx=1)) \
         .select('ip_address','ip_Date','url_address','Status_code','storage')
     print(res_df.show(truncate=False))
