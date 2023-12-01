@@ -1,0 +1,21 @@
+ProductID,ProductName,Category,Brand,Price,Quantity,SaleDate
+1,Apple,Produce,ABC Farms,1.2,50,2023-01-01
+2,Bread,Bakery,XYZ Bakers,2.5,30,2023-01-01
+3,Milk,Dairy,Fresh Dairy,3.0,20,2023-01-01
+4,Chicken,Meat,Farm Fresh,5.0,10,2023-01-01
+5,Orange,Produce,DEF Orchards,1.5,40,2023-01-02
+6,Cookies,Snacks,SnackCo,2.0,25,2023-01-02
+7,Yogurt,Dairy,Creamy Delight,2.2,15,2023-01-02
+8,Beef,Meat,Local Meats,6.0,8,2023-01-02
+9,Banana,Produce,GHI Farms,1.0,60,2023-01-03
+10,Cake,Bakery,Sweet Treats,8.0,5,2023-01-03
+11,Tomato,Produce,JKL Farms,1.8,35,2023-01-04
+12,Croissant,Bakery,French Bakery,2.7,22,2023-01-04
+13,Cheese,Dairy,Cheese Haven,4.5,18,2023-01-04
+14,Sausages,Meat,Savory Meats,4.2,12,2023-01-04
+15,Grapes,Produce,Vineyard Selection,2.0,45,2023-01-05
+16,Chips,Snacks,Crisp Crunch,1.2,30,2023-01-05
+17,Ice Cream,Dairy,Sweet Delights,3.8,14,2023-01-05
+18,Salmon,Meat,Fresh Seafood,9.0,7,2023-01-05
+19,Lettuce,Produce,Green Farms,1.5,28,2023-01-06
+20,Pie,Bakery,Homemade Pies,7.5,6,2023-01-06

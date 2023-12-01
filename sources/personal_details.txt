@@ -1,0 +1,15 @@
+1,John|Doe,1995/05/10,johndoe@example.com,3-17-Chittoor-517408-Andhra Pradesh-India
+2,Jane|Smith,1996/08/22,janesmith@example.com,7-42-Bangalore-560001-Karnataka-India
+3,Mark|Johnson,1997/03/15,markjohnson@example.com,12-8-Mumbai-400001-Maharashtra-India
+4,Emily|Williams,1998/11/28,emilywilliams@example.com,9-33-Hyderabad-500001-Telangana-India
+5,Michael|Brown,1999/07/04,michaelbrown@example.com,15-21-Delhi-110001-Delhi-India
+6,Sophia|Miller,2000/01/19,sophiamiller@example.com,5-10-Pune-411001-Maharashtra-India
+7,Aiden|Anderson,2001/09/03,aidenanderson@example.com,11-14-Kolkata-700001-West Bengal-India
+8,Olivia|Martin,2002/04/12,oliviamartin@example.com,8-25-Chennai-600001-Tamil Nadu-India
+9,Liam|Garcia,2003/10/27,liamgarcia@example.com,17-29-Ahmedabad-380001-Gujarat-India
+10,Emma|Clark,2004/06/08,emmaclark@example.com,14-18-Jaipur-302001-Rajasthan-India
+11,Noah|Taylor,1999/03/21,noahtaylor@example.com,6-22-Lucknow-226001-Uttar Pradesh-India
+12,Mia|Moore,2000/11/15,miamoore@example.com,13-35-Bhopal-462001-Madhya Pradesh-India
+13,Ethan|Hill,2001/07/30,ethanhill@example.com,10-19-Chandigarh-160001-Chandigarh-India
+14,Isabella|Adams,2002/02/03,isabellaadams@example.com,16-27-Haridwar-249401-Uttarakhand-India
+15,Mason|Wright,2003/12/17,masonwright@example.com,9-24-Patna-800001-Bihar-India
