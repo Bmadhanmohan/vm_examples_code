@@ -1,6 +1,6 @@
-from pyspark.sql import SparkSession, DataFrame, Window
+from pyspark.sql import *
 from pyspark.sql.types import StructType, StructField, DoubleType, StringType
-
+from pyspark import *
 from main.base import PySparkJobInterface
 import pyspark.sql.functions as F
 
@@ -15,20 +15,23 @@ class PySparkJob(PySparkJobInterface):
 
     def init_spark_session(self) -> SparkSession:
         # TODO: add your code here
-        ...
+        self.spark=SparkSession.builder.master('local').appName('Faulty Vehicle Detection')
+        return self.spark
 
     def read_csv(self, input_path: str) -> DataFrame:
         # TODO: add your code here
-        ...
+        self.sp=spark.read.option('header','False').option('schema',vehicles).csv(input_path)
+        return self.sp
+
 
     def calc_average_efficiency(self, observed: DataFrame) -> DataFrame:
         # TODO: add your code here
-        ...
+        return 0
 
     def find_faulty_vehicles(self, avg_observed: DataFrame, required: DataFrame) -> DataFrame:
         # TODO: add your code here
-        ...
+        return 0
 
     def save_as(self, data: DataFrame, output_path: str) -> None:
         # TODO: add your code here
-        ...
+        return 0
