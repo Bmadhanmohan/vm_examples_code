@@ -20,7 +20,7 @@ class PySparkJob(PySparkJobInterface):
 
     def read_csv(self, input_path: str) -> DataFrame:
         # TODO: add your code here
-        self.sp=SparkSession.builder.getOrCreate().read.options(header=False,schema=vehicles).csv(input_path)
+        self.sp=spark.read.options(header=False,schema=vehicles).csv(input_path)
         return self.sp
 
 
