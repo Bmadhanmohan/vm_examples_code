@@ -20,9 +20,8 @@ class PySparkJob(PySparkJobInterface):
 
     def read_csv(self, input_path: str) -> DataFrame:
         # TODO: add your code here
-        self.sp=SparkSession.read.options(header=False,schema=vehicles).csv(input_path)
+        self.sp= SparkSession.builder.getOrCreate().read.format("csv").option("header", "true").schema(vehicles).load(input_path)
         return self.sp
-
 
     def calc_average_efficiency(self, observed: DataFrame) -> DataFrame:
         # TODO: add your code here
