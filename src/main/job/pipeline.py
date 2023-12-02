@@ -15,12 +15,12 @@ class PySparkJob(PySparkJobInterface):
 
     def init_spark_session(self) -> SparkSession:
         # TODO: add your code here
-        self.spark=SparkSession.builder.master('local').appName('Faulty Vehicle Detection')
+        self.spark=SparkSession.builder.master('local').appName('Faulty Vehicle Detection').getOrCreate()
         return self.spark
 
     def read_csv(self, input_path: str) -> DataFrame:
         # TODO: add your code here
-        self.sp=SparkSession.read.option('header','False').option('schema',vehicles).csv(input_path)
+        self.sp=spark.read.option("header","False").option('schema',vehicles).csv(input_path)
         return self.sp
 
 
