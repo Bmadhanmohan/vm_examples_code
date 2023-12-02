@@ -17,14 +17,16 @@ class PySparkJob(PySparkJobInterface):
         # TODO: add your code here
         self.spark=SparkSession.builder.master('local').appName('Faulty Vehicle Detection').getOrCreate()
         return self.spark
-
     def read_csv(self, input_path: str) -> DataFrame:
         # TODO: add your code here
-        self.sp= SparkSession.builder.getOrCreate().read.format("csv").option("header", "true").schema(vehicles).load(input_path)
+        self.sp= SparkSession.builder.getOrCreate().read.format("csv").option("header", "true").schema(vehicles).load(input_path).toDf('data')
+        print(sp.show())
         return self.sp
 
     def calc_average_efficiency(self, observed: DataFrame) -> DataFrame:
         # TODO: add your code here
+        print(observed.show())
+
         return 1
 
     def find_faulty_vehicles(self, avg_observed: DataFrame, required: DataFrame) -> DataFrame:
