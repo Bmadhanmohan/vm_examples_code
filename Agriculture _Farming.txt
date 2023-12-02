@@ -1,0 +1,22 @@
+Sample Inpupt Dataset:
+----------------------------------------------+-----------------------+-----------+------------------------+
+|Species                                       |Category               |Period     |Annual percentage change|
++----------------------------------------------+-----------------------+-----------+------------------------+
+|Greenfinch (Chloris chloris)                  |Farmland birds         |(1970-2014)|-1.13                   |
+|Siskin (Carduelis spinus)                     |Woodland birds         |(1995-2014)|2.26                    |
+|European shag (Phalacrocorax artistotelis)    |Seabirds               |(1986-2014)|-2.31                   |
+|Mute Swan (Cygnus olor)                       |Water and wetland birds|(1975-2014)|1.65                    |
+|Collared Dove (Streptopelia decaocto)         |Other                  |(1970-2014)|5.2                     |
++----------------------------------------------+-----------------------+-----------+------------------------+
+
+The requirement is to create the following three functions:
+1) get_english_name - this function should get the Species column value and return the English name.
+2) get_start_year - this function should get the Period column value and return the year(an integer) when data collection began.
+3) get_trend - this function should get the Annual percentage change column value and return the change trend category based on the following rules:
+a. Annual percentage change less than -3.00 – return 'strong decline'
+b. Annual percentage change between -3.00 and -0.50 (inclusive) – return 'weak decline'
+c. Annual percentage change between -0.50 and 0.50 (exclusive) – return 'no change'
+d. Annual percentage change between 0.50 and 3.00 (inclusive) – return 'weak increase'
+e. Annual percentage change more than 3.00 – return 'strong increase'.
+
+Write three Python functions and use them to produce an output dataframe.
