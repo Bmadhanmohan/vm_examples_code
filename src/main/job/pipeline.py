@@ -26,12 +26,12 @@ class PySparkJob(PySparkJobInterface):
 
     def calc_average_efficiency(self, observed: DataFrame) -> DataFrame:
         # TODO: add your code here
-        return 0
+        return 1
 
     def find_faulty_vehicles(self, avg_observed: DataFrame, required: DataFrame) -> DataFrame:
         # TODO: add your code here
-        return 0
+        return 1
 
     def save_as(self, data: DataFrame, output_path: str) -> None:
         # TODO: add your code here
-        return 0
+        return 1
