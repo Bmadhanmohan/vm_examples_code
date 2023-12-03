@@ -24,12 +24,10 @@ class PySparkJob(PySparkJobInterface):
         return self.sp
 
     def calc_average_efficiency(self, observed: DataFrame) -> DataFrame:
-        # TODO: add your code here
-        # data=observed.groupBy(observed.vehicleId).agg({"efficiency":"avg"}).withColumnRenamed('avg(efficiency)','fuelEfficiency')
-        # data=data.select(data.vehicleId,data.fuelEfficiency)
-        observed.createOrReplaceGlobalTempView('tab')
-        return SparkSession.builder.getOrCreate().sql("select vehicleId,avg(efficiency) as fuelEfficiency from tab group by vehicleId")
-        #return data
+        #TODO: add your code here
+        data=observed.groupBy(observed.vehicleId).agg({"efficiency":"avg"}).withColumnRenamed('avg(efficiency)','fuelEfficiency')
+        data=data.select(data.vehicleId,data.fuelEfficiency)
+        return data
     def find_faulty_vehicles(self, avg_observed: DataFrame, required: DataFrame) -> DataFrame:
         # TODO: add your code here
         return 1
