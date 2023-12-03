@@ -34,4 +34,4 @@ class PySparkJob(PySparkJobInterface):
 
     def save_as(self, data: DataFrame, output_path: str) -> None:
         # TODO: add your code here
-        return 1
+        data.saveAsTextFile(output_path)
