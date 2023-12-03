@@ -29,9 +29,7 @@ class PySparkJob(PySparkJobInterface):
         # data=data.select('vehicleId','efficiency')
         observed.createOrReplaceGlobalTempView('tab')
         data=SparkSession.builder.getOrCreate().sql("select vehicleId,avg(fuelEfficiency) from tab group by vehicleId")
-        print(data.show())
-
-        return 1
+        return data
 
     def find_faulty_vehicles(self, avg_observed: DataFrame, required: DataFrame) -> DataFrame:
         # TODO: add your code here
