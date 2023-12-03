@@ -25,7 +25,7 @@ class PySparkJob(PySparkJobInterface):
 
     def calc_average_efficiency(self, observed: DataFrame) -> DataFrame:
         # TODO: add your code here
-        data=observed.groupBy(observed.vehicleId).agg({"efficiency":"avg"})
+        data=observed.groupBy(observed.vehicleId).agg({"fuelEfficiency":"avg"})
         #data=data.select('vehicleId','efficiency')
         #return observed.createOrReplaceGlobalTempView('tab').sql("select vehicleId,avg(fuelEfficiency) from tab group by vehicleId")
         return data
