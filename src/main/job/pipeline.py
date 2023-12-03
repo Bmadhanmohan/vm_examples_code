@@ -1,7 +1,7 @@
 from pyspark.sql import *
 from pyspark.sql.types import StructType, StructField, DoubleType, StringType
 from pyspark import *
-from pyspark.sql.functions import *
+from pyspark.sql.functions import lit
 from main.base import PySparkJobInterface
 import pyspark.sql.functions as F
 
@@ -30,8 +30,13 @@ class PySparkJob(PySparkJobInterface):
         return data
     def find_faulty_vehicles(self, avg_observed: DataFrame, required: DataFrame) -> DataFrame:
         # TODO: add your code here
-        return 1
-
+        df=avg_observed.join[required,avg_observed.vehicleId==required.vehicleId,"inner join"]
+        df=df.withColumn("obs",abs(df.observedfuelefficiency-df.requirefuelEfficiency))
+        df=df.withColumn("faultyvehicle",lit("faulty") if df.obs>=5 else lit("Not faulty"))
+        df.filter(df.faultyvehicle=='faulty')
+        
+        return df.select(df.vehicleId,df.faulty_effieicency)
     def save_as(self, data: DataFrame, output_path: str) -> None:
         # TODO: add your code here
+
         data.saveAsTextFile(output_path)
