@@ -30,6 +30,7 @@ class PySparkJob(PySparkJobInterface):
         return data
     def find_faulty_vehicles(self, avg_observed: DataFrame, required: DataFrame) -> DataFrame:
         # TODO: add your code here
+        avg_observed=calc_average_efficiency(avg_observed)
         df=avg_observed.join[required,avg_observed.vehicleId==required.vehicleId,"inner join"]
         df=df.withColumn("obs",abs(df.observedfuelefficiency-df.requirefuelEfficiency))
         df=df.withColumn("faultyvehicle",lit("faulty") if df.obs>=5 else lit("Not faulty"))
