@@ -24,7 +24,9 @@ class PySparkJob(PySparkJobInterface):
 
     def calc_average_efficiency(self, observed: DataFrame) -> DataFrame:
         # TODO: add your code here
-        print(observed.show())
+        observed.createOrReplaceGlobalTempView('tab')
+        data=spark.sql("select vehicleId,sum(fuel_efficiency)/count(vehicleId) from tab group by vehicleId")
+        print(data.show())
 
         return 1
 
