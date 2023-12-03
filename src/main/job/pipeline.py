@@ -1,6 +1,7 @@
 from pyspark.sql import *
 from pyspark.sql.types import StructType, StructField, DoubleType, StringType
 from pyspark import *
+from pyspark.sql.functions import *
 from main.base import PySparkJobInterface
 import pyspark.sql.functions as F
 
@@ -24,8 +25,10 @@ class PySparkJob(PySparkJobInterface):
 
     def calc_average_efficiency(self, observed: DataFrame) -> DataFrame:
         # TODO: add your code here
-        observed.createOrReplaceGlobalTempView('tab')
-        data=SparkSession.builder.getOrCreate().sql("select vehicleId,sum(fuel_efficiency)/count(vehicleId) from tab group by vehicleId")
+        data=observed.groupBy(observed.vehicleId).withColumn('efficiency',sum(observed.vehicleId)/observed['vehicleId'].count())
+        data=data.select('vehicleId','efficiency')
+        #observed.createOrReplaceGlobalTempView('tab')
+        #data=SparkSession.builder.getOrCreate().sql("select vehicleId,sum(fuel_efficiency)/count(vehicleId) from tab group by vehicleId")
         print(data.show())
 
         return 1
