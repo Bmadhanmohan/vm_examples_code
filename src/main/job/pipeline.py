@@ -17,7 +17,6 @@ class PySparkJob(PySparkJobInterface):
     def init_spark_session(self) -> SparkSession:
         # TODO: add your code here
         self.spark=SparkSession.builder.master('local').appName('Faulty Vehicle Detection').getOrCreate()
-        print('errror message')
         return self.spark
     def read_csv(self, input_path: str) -> DataFrame:
         # TODO: add your code here
@@ -26,7 +25,7 @@ class PySparkJob(PySparkJobInterface):
 
     def calc_average_efficiency(self, observed: DataFrame) -> DataFrame:
         # TODO: add your code here
-        data=observed.groupBy(observed.vehicleId).agg({"fuelEfficiency":"avg"})
+        data=observed.groupBy(observed.vehicleId).agg({"efficiency":"avg"})
         #data=data.select('vehicleId','efficiency')
         #return observed.createOrReplaceGlobalTempView('tab').sql("select vehicleId,avg(fuelEfficiency) from tab group by vehicleId")
         return data
