@@ -17,6 +17,7 @@ class PySparkJob(PySparkJobInterface):
     def init_spark_session(self) -> SparkSession:
         # TODO: add your code here
         self.spark=SparkSession.builder.master('local').appName('Faulty Vehicle Detection').getOrCreate()
+        print('errror message')
         return self.spark
     def read_csv(self, input_path: str) -> DataFrame:
         # TODO: add your code here
