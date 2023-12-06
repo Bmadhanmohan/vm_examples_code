@@ -1,0 +1,5 @@
+Row(vehicleId='v5', fuelEfficiency=45.666666666666664, vehicleId='v5', efficiency=45.0, obs=1.0)
+Row(vehicleId='v2', fuelEfficiency=29.5, vehicleId='v2', efficiency=30.0, obs=-1.0)
+Row(vehicleId='v1', fuelEfficiency=24.333333333333332, vehicleId='v1', efficiency=25.0, obs=-1.0)
+Row(vehicleId='v3', fuelEfficiency=35.0, vehicleId='v3', efficiency=35.0, obs=0.0)
+Row(vehicleId='v4', fuelEfficiency=40.25, vehicleId='v4', efficiency=40.0, obs=0.0)

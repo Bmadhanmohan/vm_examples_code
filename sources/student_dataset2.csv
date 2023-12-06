@@ -1,0 +1,10 @@
+StudentID,FirstName,LastName,Gender,DOB,Grade
+1,John,MM,Male,1995-05-10,12
+2,Jane,,Female,1996-08-22,10
+3,Mark,Johnson,Male,1997-03-15,10
+4,Emily,Williams,Female,1998-11-28,10
+5,Michael,HH,Male,1999-07-04,11
+6,Emma,Jones,Female,2000-01-19,10
+7,William,,Male,2001-09-03,9
+8,Sophia,Miller,Female,2002-04-12,11
+9,Aiden,NNN,Male,2003-10-27,10,10
